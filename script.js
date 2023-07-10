@@ -1,5 +1,26 @@
 const options = ["Rock", "Paper", "Scissors"];
 
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissor = document.getElementById('scissor');
+
+
+rock.addEventListener('click', function () {
+  console.log(playRound('Rock', getComputerChoice()));
+  return;
+});
+
+paper.addEventListener('click', function () {
+  console.log(playRound('Paper', getComputerChoice()));
+  return;
+});
+
+scissor.addEventListener('click', function () {
+  console.log(playRound('Scissors', getComputerChoice()));
+  return;
+});
+
+
 function getComputerChoice() {
   return options[Math.round(Math.random() * 2) + 0];
 }
@@ -38,16 +59,18 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+
+
 // console.log(getComputerChoice());
-playerSelection = window.prompt("Enter your choice!");
+// playerSelection = window.prompt("Enter your choice!");
 // const computerSelection = getComputerChoice();
 // console.log(computerSelection);
 // console.log(playRound(playerSelection, computerSelection));
 
-for (let i = 0; i < 5; i++) {
-  const computerSelection = getComputerChoice();
-  console.log(
-    "Player = " + playerSelection + ", Computer = " + computerSelection
-  );
-  console.log(playRound(playerSelection, computerSelection));
-}
+// for (let i = 0; i < 5; i++) {
+//   const computerSelection = getComputerChoice();
+//   console.log(
+//     "Player = " + playerSelection + ", Computer = " + computerSelection
+//   );
+//   console.log(playRound(playerSelection, computerSelection));
+// }
