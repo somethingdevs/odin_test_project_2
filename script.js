@@ -3,21 +3,20 @@ const options = ["Rock", "Paper", "Scissors"];
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissor = document.getElementById('scissor');
+const result = document.getElementById('result');
 
 
 rock.addEventListener('click', function () {
-  console.log(playRound('Rock', getComputerChoice()));
-  return;
+  result.textContent = playRound('Rock', getComputerChoice());
+
 });
 
 paper.addEventListener('click', function () {
-  console.log(playRound('Paper', getComputerChoice()));
-  return;
+  result.textContent = playRound('Paper', getComputerChoice());
 });
 
 scissor.addEventListener('click', function () {
-  console.log(playRound('Scissors', getComputerChoice()));
-  return;
+  result.textContent = playRound('Scissors', getComputerChoice());
 });
 
 
